@@ -1,0 +1,22 @@
+{
+  "name": "nolka/behavior-tree",
+  "description": "Stateful BehaviorTree",
+  "minimum-stability": "alpha",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "nolka",
+      "email": "xternalx@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "BehaviorTree\\": "src/",
+      "BehaviorTree\\Tests\\": "tests/",
+    }
+  }
+}
