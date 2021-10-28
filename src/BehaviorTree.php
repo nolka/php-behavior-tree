@@ -6,7 +6,7 @@ namespace BehaviorTree;
 
 
 use BehaviorTree\Contracts\Event\EventInterface;
-use Node\BehaviorTreeRoot;
+use BehaviorTree\Node\BehaviorTreeRoot;
 
 class BehaviorTree
 {

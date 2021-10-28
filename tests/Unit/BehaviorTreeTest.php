@@ -65,14 +65,14 @@ class BehaviorTreeTest extends TestCase
 
         $serializer = new Serializer();
         $actualJson = $serializer->serialize($composite);
-        $expectedJson = '{"class_name":"BehaviorTree\\\\Nodes\\\\Composite\\\\Sequence","childs":[{"class_name":"BehaviorTree\\\\Nodes\\\\Tasks\\\\Task1"},{"class_name":"BehaviorTree\\\\Nodes\\\\Tasks\\\\Task2"},{"class_name":"BehaviorTree\\\\Nodes\\\\Composite\\\\Selector","childs":[{"class_name":"BehaviorTree\\\\Nodes\\\\Tasks\\\\Task2"}]}]}';
+        $expectedJson = '{"class_name":"BehaviorTree\\\\Node\\\\Composite\\\\Sequence","childs":[{"class_name":"BehaviorTree\\\\Node\\\\Task\\\\Task1"},{"class_name":"BehaviorTree\\\\Node\\\\Task\\\\Task2"},{"class_name":"BehaviorTree\\\\Node\\\\Composite\\\\Selector","childs":[{"class_name":"BehaviorTree\\\\Node\\\\Task\\\\Task2"}]}]}';
 
         $this->assertEquals($expectedJson, $actualJson);
     }
 
     public function testDeserializer()
     {
-        $jsonData = '{"class_name":"BehaviorTree\\\\Nodes\\\\Composite\\\\Sequence","childs":[{"class_name":"BehaviorTree\\\\Nodes\\\\Tasks\\\\Task1"},{"class_name":"BehaviorTree\\\\Nodes\\\\Tasks\\\\Task2"},{"class_name":"BehaviorTree\\\\Nodes\\\\Composite\\\\Selector","childs":[{"class_name":"BehaviorTree\\\\Nodes\\\\Tasks\\\\Task2"}]}]}';
+        $jsonData = '{"class_name":"BehaviorTree\\\\Node\\\\Composite\\\\Sequence","childs":[{"class_name":"BehaviorTree\\\\Node\\\\Task\\\\Task1"},{"class_name":"BehaviorTree\\\\Node\\\\Task\\\\Task2"},{"class_name":"BehaviorTree\\\\Node\\\\Composite\\\\Selector","childs":[{"class_name":"BehaviorTree\\\\Node\\\\Task\\\\Task2"}]}]}';
 
         $deserializer = new Deserializer();
         $composite = $deserializer->deserialize($jsonData);
