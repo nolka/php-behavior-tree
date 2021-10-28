@@ -2,16 +2,22 @@
 
 namespace BehaviorTree\Node;
 
+use BehaviorTree\Contracts\Event\EventInterface;
 use BehaviorTree\Contracts\Node\Composite\CompositeInterface;
 
 class BehaviorTreeRoot
 {
-    /** @var CompositeInterface[] */
     private CompositeInterface $composite;
 
-    public function execute(): void
+    public function __construct(
+        private ?Counters $counters = null,
+    )
     {
-        $this->composite->execute();
+    }
+
+    public function execute(EventInterface $event): void
+    {
+        $this->composite->execute($event);
     }
 
     public function setComposite(CompositeInterface $composite)
@@ -19,8 +25,13 @@ class BehaviorTreeRoot
         $this->composite = $composite;
     }
 
-    public function getComposite(): array
+    public function getComposite(): CompositeInterface
     {
         return $this->composite;
+    }
+
+    public function getCounters(): ?Counters
+    {
+        return $this->counters;
     }
 }

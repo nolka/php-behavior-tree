@@ -10,29 +10,38 @@ use BehaviorTree\Node\BehaviorTreeRoot;
 
 class BehaviorTree
 {
-    public function __construct()
+    private BehaviorTreeRoot $behaviorTreeRoot;
+
+    public function __construct(
+        private string $name,
+    )
     {
     }
 
-    public function play(EventInterface $event, BehaviorTreeRoot $behaviorTreeRoot)
+    public function play(EventInterface $event, BehaviorTreeRoot $behaviorTreeRoot): void
     {
-        $this->prepareBehaviorTree($event);
+        $this->prepareBehaviorTree($event, $behaviorTreeRoot);
         $this->runBehaviorTree($event, $behaviorTreeRoot);
-        $this->save();
     }
 
-    private function prepareBehaviorTree(EventInterface $event)
+    private function prepareBehaviorTree(EventInterface $event, BehaviorTreeRoot $behaviorTreeRoot): void
     {
-
+        $this->behaviorTreeRoot = $behaviorTreeRoot;
+        $event->setBehaviorTree($this);
     }
 
-    private function runBehaviorTree(EventInterface $event, BehaviorTreeRoot $behaviorTreeRoot)
+    private function runBehaviorTree(EventInterface $event, BehaviorTreeRoot $behaviorTreeRoot): void
     {
-        $behaviorTreeRoot->execute();
+        $behaviorTreeRoot->execute($event);
     }
 
-    private function save()
+    public function getName(): string
     {
+        return $this->name;
+    }
 
+    public function getBehaviorTreeRoot(): BehaviorTreeRoot
+    {
+        return $this->behaviorTreeRoot;
     }
 }
