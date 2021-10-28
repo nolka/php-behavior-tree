@@ -3,12 +3,12 @@
 namespace BehaviorTree\Tests\Unit;
 
 use BehaviorTree\BehaviorTree;
-use BehaviorTree\Events\Event;
-use BehaviorTree\Nodes\BehaviorTreeRoot;
-use BehaviorTree\Nodes\Composite\Selector;
-use BehaviorTree\Nodes\Composite\Sequence;
-use BehaviorTree\Nodes\Tasks\Task1;
-use BehaviorTree\Nodes\Tasks\Task2;
+use BehaviorTree\Event\Event;
+use BehaviorTree\Node\BehaviorTreeRoot;
+use BehaviorTree\Node\Composite\Selector;
+use BehaviorTree\Node\Composite\Sequence;
+use BehaviorTree\Node\Task\Task1;
+use BehaviorTree\Node\Task\Task2;
 use BehaviorTree\Storage\Json\Deserializer;
 use BehaviorTree\Storage\Json\Serializer;
 use PHPUnit\Framework\TestCase;

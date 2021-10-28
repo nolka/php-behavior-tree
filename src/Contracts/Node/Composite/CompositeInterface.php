@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace BehaviorTree\Contracts\Nodes\Composite;
+namespace BehaviorTree\Contracts\Node\Composite;
 
 
-use BehaviorTree\Contracts\Nodes\NodeInterface;
-use BehaviorTree\Nodes\AbstractTask;
+use BehaviorTree\Contracts\Node\NodeInterface;
+use BehaviorTree\Node\AbstractTask;
 
 interface CompositeInterface
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BehaviorTree\Nodes\Result;
+namespace BehaviorTree\Node\Result;
 
 
 class Failure

@@ -1,11 +1,11 @@
 <?php
 
-namespace BehaviorTree\Nodes;
+namespace BehaviorTree\Node;
 
-use BehaviorTree\Contracts\Nodes\Composite\CompositeInterface;
-use BehaviorTree\Contracts\Nodes\NodeInterface;
-use BehaviorTree\Nodes\Result\Failure;
-use BehaviorTree\Nodes\Result\Success;
+use BehaviorTree\Contracts\Node\Composite\CompositeInterface;
+use BehaviorTree\Contracts\Node\NodeInterface;
+use BehaviorTree\Node\Result\Failure;
+use BehaviorTree\Node\Result\Success;
 
 abstract class AbstractNode implements NodeInterface, CompositeInterface
 {

@@ -2,8 +2,8 @@
 
 namespace BehaviorTree\Storage\Json;
 
-use BehaviorTree\Contracts\Nodes\Composite\CompositeInterface;
-use BehaviorTree\Contracts\Nodes\TaskInterface;
+use BehaviorTree\Contracts\Node\Composite\CompositeInterface;
+use BehaviorTree\Contracts\Node\TaskInterface;
 
 class Deserializer
 {

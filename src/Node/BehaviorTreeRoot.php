@@ -1,8 +1,8 @@
 <?php
 
-namespace BehaviorTree\Nodes;
+namespace BehaviorTree\Node;
 
-use BehaviorTree\Contracts\Nodes\Composite\CompositeInterface;
+use BehaviorTree\Contracts\Node\Composite\CompositeInterface;
 
 class BehaviorTreeRoot
 {

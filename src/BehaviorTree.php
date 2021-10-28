@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace BehaviorTree;
 
 
-use BehaviorTree\Contracts\Events\EventInterface;
-use BehaviorTree\Nodes\BehaviorTreeRoot;
+use BehaviorTree\Contracts\Event\EventInterface;
+use Node\BehaviorTreeRoot;
 
 class BehaviorTree
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace BehaviorTree\Events;
+namespace BehaviorTree\Event;
 
 
-use BehaviorTree\Contracts\Events\EventInterface;
+use BehaviorTree\Contracts\Event\EventInterface;
 
 class Event implements EventInterface
 {

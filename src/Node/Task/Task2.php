@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace BehaviorTree\Nodes\Tasks;
+namespace BehaviorTree\Node\Task;
 
 
-use BehaviorTree\Nodes\AbstractTask;
-use BehaviorTree\Nodes\Result\Failure;
-use BehaviorTree\Nodes\Result\Success;
+use BehaviorTree\Node\AbstractTask;
+use BehaviorTree\Node\Result\Failure;
+use BehaviorTree\Node\Result\Success;
 
 class Task2 extends AbstractTask
 {
