@@ -1,6 +1,6 @@
 {
-  "name": "nolka/behavior-tree",
-  "description": "Stateful BehaviorTree",
+  "name": "nolka/php-behavior-tree",
+  "description": "Stateful BehaviorTree implementation in pure php 8",
   "minimum-stability": "alpha",
   "license": "GPL-3.0-or-later",
   "authors": [
