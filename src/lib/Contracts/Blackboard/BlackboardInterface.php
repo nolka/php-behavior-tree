@@ -4,7 +4,7 @@ namespace BehaviorTree\Contracts\Blackboard;
 
 interface BlackboardInterface
 {
-    public function load(string $blackboardData): void;
+    public function load(array $blackboardData): void;
 
-    public function save(): string;
+    public function save(): array;
 }
