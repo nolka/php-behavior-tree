@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace BehaviorTree\Storage\Json;
 
 use BehaviorTree\Contracts\Node\Composite\CompositeInterface;
