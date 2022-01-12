@@ -17,8 +17,8 @@
   },
   "autoload": {
     "psr-4": {
-      "BehaviorTree\\": "src/",
-      "BehaviorTree\\Tests\\": "tests/"
+      "BehaviorTree\\": "src/lib",
+      "BehaviorTree\\Tests\\": "src/tests"
     }
   }
 }
